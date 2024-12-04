@@ -1,0 +1,64 @@
+<header class="flex px-4 py-2 bg-cyan-200 text-white shadow overflow-hidden">
+  <nav
+    class="w-full flex flex-col lg:flex-row lg:justify-between justify-center items-center"
+  >
+    <!-- Logo Section -->
+    <div class="mb-4 lg:mb-1">
+      <img src="../../assets/images/logo.png" style="height: 70px" />
+    </div>
+
+    <!-- Input Section -->
+    <div class="mb-4 lg:mb-1 w-full lg:w-auto">
+      <div class="flex w-full lg:w-[600px]">
+        <input
+        placeholder="Quick Search..."
+          type="text"
+          class="border border-gray-500 rounded-sm text-black bg-transparent focus:border-cyan-500 w-full p-1"
+        />
+        <button class="rounded-sm ml-3 focus:border-cyan-500 lg:w-auto">
+          <i class="fa-solid fa-magnifying-glass text-black text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Icons Section -->
+    <div class="mb-4 lg:mb-1">
+      <ul class="list-none flex gap-x-7 justify-center lg:justify-start">
+        <li
+          routerLink="/signin" 
+          class="lg:relative cursor-pointer text-teal-800 hover:text-gray-500"
+        >
+          <i class="fa-solid fa-user text-2xl text-cyan-500 shadow-lg"></i>
+          <!-- Badge (Always Rendered) -->
+          <div
+            class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-cyan-800 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full"
+            [class.hidden]="notificationCounts.user === 0"
+          >
+            {{ notificationCounts.user }}
+          </div>
+        </li>
+        <li routerLink="/wishlist" class="lg:relative cursor-pointer hover:text-gray-500">
+          <i class="fa-solid fa-heart text-2xl text-cyan-500"></i>
+          <div
+            class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-cyan-800 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full"
+            [class.hidden]="notificationCounts.heart === 0"
+          >
+            {{ notificationCounts.heart }}
+          </div>
+        </li>
+        <li routerLink="/cart" class="lg:relative cursor-pointer hover:text-gray-500">
+          <i
+            class="fa-solid fa-bag-shopping text-2xl text-cyan-500 shadow-lg"
+          ></i>
+          <div
+            class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-cyan-800 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full"
+            [class.hidden]="notificationCounts.bag === 0"
+          >
+            {{ notificationCounts.bag }}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</header>

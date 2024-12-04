@@ -1,0 +1,80 @@
+<header
+  class="flex px-4 py-2 text-white items-center justify-between shadow border-b-2 border-black"
+>
+  <nav class="w-full flex justify-between items-center">
+    <span class="text-sm">Welcome to our online store, User</span>
+    <ul class="hidden list-none lg:flex gap-x-7">
+      <li routerLink="/" class="cursor-pointer hover:text-cyan-200 text-sm">
+        Track Order
+      </li>
+      <li routerLink="/" class="cursor-pointer hover:text-cyan-200 text-sm">
+        About
+      </li>
+      <li routerLink="/search" class="cursor-pointer hover:text-cyan-200 text-sm">
+        Our Stores
+      </li>
+      <li routerLink="/" class="cursor-pointer hover:text-cyan-200 text-sm">
+        Blog
+      </li>
+      <li routerLink="/" class="cursor-pointer hover:text-cyan-200 text-sm">
+        Contact
+      </li>
+      <li routerLink="/" class="cursor-pointer hover:text-cyan-200 text-sm">
+        Help & FAQs
+      </li>
+      <li routerLink="/" class="cursor-pointer hover:text-cyan-200 text-sm">
+        <i class="fa-solid fa-flag-usa text-cyan-500"></i> ENG
+      </li>
+      <li routerLink="/" class="cursor-pointer hover:text-cyan-200 text-sm">
+        <i class="fa-brands fa-facebook-f text-cyan-500"></i>
+      </li>
+      <li routerLink="/" class="cursor-pointer hover:text-cyan-200 text-sm">
+        <i class="fa-brands fa-x-twitter text-cyan-500"></i>
+      </li>
+      <li routerLink="/" class="cursor-pointer hover:text-cyan-200 text-sm">
+        <i class="fa-brands fa-linkedin-in text-cyan-500"></i>
+      </li>
+    </ul>
+
+    <div class="relative lg:hidden">
+      <!-- Trigger Button -->
+      <button
+        id="icon-button"
+        class="rounded-md px-2 focus:outline-none"
+        aria-label="Toggle Menu"
+        (click)="togglePopup($event)"
+      >
+        <i class="fa-solid fa-bars hover:text-cyan-500"></i>
+        <!-- Font Awesome Icon -->
+      </button>
+
+      <!-- Popup Menu -->
+      <div
+        id="popup-list"
+        #popupList
+        class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden"
+      >
+        <ul class="py-1 text-gray-700 relative">
+          <li>
+            <a href="#" class="block bg-cyan-600 text-white px-4 py-2 hover:bg-cyan-900">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block bg-cyan-600 text-white px-4 py-2 hover:bg-cyan-900">About</a>
+          </li>
+          <li>
+            <a href="#" class="block bg-cyan-600 text-white px-4 py-2 hover:bg-cyan-900">Our Stores</a>
+          </li>
+          <li>
+            <a href="#" class="block bg-cyan-600 text-white px-4 py-2 hover:bg-cyan-900">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="block bg-cyan-600 text-white px-4 py-2 hover:bg-cyan-900">Contact</a>
+          </li>
+          <li>
+            <a href="#" class="block bg-cyan-600 text-white px-4 py-2 hover:bg-cyan-900">My Account</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,8 @@
+/* Carousel styles */
+.hidden {
+  display: none;
+}
+
+img {
+  border-radius: 0.5rem;
+}

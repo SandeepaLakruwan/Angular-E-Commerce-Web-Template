@@ -1,0 +1,212 @@
+<div
+  class="flex flex-col lg:flex-row items-center justify-center h-screen bg-transparent mt-48 mb-48"
+>
+  <!-- Left Section (Sign Up Image) -->
+  <div
+    class="hidden lg:w-1/2 lg:flex flex-col items-center justify-center text-center px-1 mx-2 py-8 bg-cyan-800 rounded-lg shadow-md"
+  >
+    <img
+      src="../../assets/images/sign-in-image.jpg"
+      alt="Designed by Freepik"
+      class="mb-4 w-72 h-44"
+    />
+    <h1 class="text-2xl font-bold text-white mb-2">Welcome to Online Shop!</h1>
+    <p class="text-gray-100">
+      Please sign up to continue to <span class="font-bold">Online Shop</span>.
+    </p>
+  </div>
+
+  <!-- Center Line -->
+  <div class="hidden lg:block w-px bg-white h-4/5 mx-4"></div>
+
+  <!-- Right Section (Sign Up Form) -->
+  <div
+    class="w-2/3 lg:w-1/2 flex flex-col items-center justify-center px-8 mx-3 py-8 bg-white rounded-lg shadow-md"
+  >
+    <h2 class="text-2xl font-bold text-cyan-500 mb-4">Sign Up</h2>
+
+    <!-- Sign Up Form -->
+    <form class="w-full max-w-md space-y-4" (ngSubmit)="onSubmit()">
+      <!-- First Name Field -->
+      <div>
+        <label
+          for="firstName"
+          class="block text-sm font-medium text-gray-700 mb-1"
+          >First Name</label
+        >
+        <input
+          type="text"
+          id="firstName"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+          placeholder="Enter your first name"
+          required
+        />
+      </div>
+
+      <!-- Last Name Field -->
+      <div>
+        <label
+          for="lastName"
+          class="block text-sm font-medium text-gray-700 mb-1"
+          >Last Name</label
+        >
+        <input
+          type="text"
+          id="lastName"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+          placeholder="Enter your last name"
+          required
+        />
+      </div>
+
+      <!-- Email Field -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1"
+          >Email</label
+        >
+        <input
+          type="email"
+          id="email"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+
+      <!-- Mobile Field -->
+      <div>
+        <label for="mobile" class="block text-sm font-medium text-gray-700 mb-1"
+          >Mobile</label
+        >
+        <input
+          type="tel"
+          id="mobile"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+          placeholder="Enter your mobile number"
+          required
+        />
+      </div>
+
+      <!-- Password Field -->
+      <div>
+        <label
+          for="password"
+          class="block text-sm font-medium text-gray-700 mb-1"
+          >Password</label
+        >
+        <input
+          type="password"
+          id="password"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+          placeholder="Enter your password"
+          required
+        />
+      </div>
+
+      <!-- Address Field -->
+      <div>
+        <label
+          for="address"
+          class="block text-sm font-medium text-gray-700 mb-1"
+          >Address Line 1</label
+        >
+        <input
+          type="text"
+          id="address"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+          placeholder="Enter your address"
+          required
+        />
+      </div>
+      <div>
+        <label
+          for="address"
+          class="block text-sm font-medium text-gray-700 mb-1"
+          >Address Line 2</label
+        >
+        <input
+          type="text"
+          id="address"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+          placeholder="Enter your address"
+          required
+        />
+      </div>
+
+      <!-- City Field -->
+      <div>
+        <label for="city" class="block text-sm font-medium text-gray-700 mb-1"
+          >City</label
+        >
+        <select
+          id="city"
+          name="city"
+          class="block w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+          required
+        >
+          <option value="" class=" hover:bg-cyan-900">Select a City</option>
+          <option
+            value="new-york"
+            class=" hover:bg-cyan-900"
+          >
+            New York
+          </option>
+          <option
+            value="los-angeles"
+            class=" hover:bg-cyan-900"
+          >
+            Los Angeles
+          </option>
+          <option
+            value="chicago"
+            class=" hover:bg-cyan-900"
+          >
+            Chicago
+          </option>
+          <option
+            value="miami"
+            class=" hover:bg-cyan-900"
+          >
+            Miami
+          </option>
+          <option
+            value="houston"
+            class=" hover:bg-cyan-900"
+          >
+            Houston
+          </option>
+        </select>
+      </div>
+
+      <!-- Postal Code Field -->
+      <div>
+        <label
+          for="postalCode"
+          class="block text-sm font-medium text-gray-700 mb-1"
+          >Postal Code</label
+        >
+        <input
+          type="text"
+          id="postalCode"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+          placeholder="Enter your postal code"
+          required
+        />
+      </div>
+
+      <!-- Sign Up Button -->
+      <button
+        type="submit"
+        class="w-full bg-cyan-500 text-white py-2 rounded-md shadow hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+      >
+        Sign Up
+      </button>
+    </form>
+
+    <!-- Sign In Link -->
+    <p class="text-sm text-gray-600 mt-4">
+      Already have an account?
+      <span routerLink="/signin" class="text-cyan-500 hover:underline font-medium hover:cursor-pointer">Sign In</span>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,154 @@
+<div class="bg-transparent text-white min-h-screen flex flex-col">
+    <!-- Checkout Topic and Icon -->
+    <div class="flex justify-center items-center py-6">
+      <i class="fa-solid fa-cash-register text-3xl mr-2"></i>
+      <h1 class="text-3xl font-bold">Checkout</h1>
+    </div>
+  
+    <!-- Main Content -->
+    <div class="flex flex-col lg:flex-row justify-between items-start px-8 py-4">
+      <!-- Billing Details Section -->
+      <div class="w-full lg:w-2/3 flex flex-col space-y-6 bg-white p-6 rounded-lg shadow-md text-gray-800">
+        <h2 class="text-2xl font-semibold mb-4">Billing Details</h2>
+  
+        <!-- Saved Address Checkbox -->
+        <div class="flex items-center">
+          <input type="checkbox" id="useSavedAddress" class="mr-2" />
+          <label for="useSavedAddress" class="text-sm text-gray-700">Use Saved Address</label>
+        </div>
+  
+        <!-- Billing Details Form -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div>
+            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+              placeholder="Enter your first name"
+            />
+          </div>
+          <div>
+            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+              placeholder="Enter your last name"
+            />
+          </div>
+        </div>
+  
+        <div>
+          <label for="address1" class="block text-sm font-medium text-gray-700 mb-1">Address Line 1</label>
+          <input
+            type="text"
+            id="address1"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+            placeholder="Enter your address"
+          />
+        </div>
+  
+        <div>
+          <label for="address2" class="block text-sm font-medium text-gray-700 mb-1">Address Line 2</label>
+          <input
+            type="text"
+            id="address2"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+            placeholder="Optional"
+          />
+        </div>
+  
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div>
+            <label for="city" class="block text-sm font-medium text-gray-700 mb-1">City</label>
+            <select
+              id="city"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+            >
+              <option value="">Select your city</option>
+              <option value="newyork">New York</option>
+              <option value="losangeles">Los Angeles</option>
+              <option value="chicago">Chicago</option>
+            </select>
+          </div>
+          <div>
+            <label for="postalCode" class="block text-sm font-medium text-gray-700 mb-1">Postal Code</label>
+            <input
+              type="text"
+              id="postalCode"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+              placeholder="Enter your postal code"
+            />
+          </div>
+        </div>
+  
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+            placeholder="Enter your email"
+          />
+        </div>
+  
+        <div>
+          <label for="mobile" class="block text-sm font-medium text-gray-700 mb-1">Mobile</label>
+          <input
+            type="text"
+            id="mobile"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+            placeholder="Enter your mobile number"
+          />
+        </div>
+  
+        <div>
+          <label for="note" class="block text-sm font-medium text-gray-700 mb-1">Add Note</label>
+          <textarea
+            id="note"
+            rows="2"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+            placeholder="Add any notes for the order"
+          ></textarea>
+        </div>
+      </div>
+  
+      <!-- Order Details Section -->
+      <div class="w-full lg:w-1/3 bg-white p-6 rounded-lg shadow-md text-gray-800 ml-10">
+        <h2 class="text-2xl font-semibold mb-4">Order Details</h2>
+  
+        <div *ngFor="let item of cartItems" class="flex justify-between mb-4">
+          <span>{{ item.name }}</span>
+          <span>${{ item.price * item.quantity }}</span>
+        </div>
+  
+        <div class="flex justify-between text-gray-700 font-medium mb-2">
+          <span>Shipping Cost</span>
+          <span>$10.00</span>
+        </div>
+  
+        <div class="flex justify-between text-gray-800 font-semibold text-lg mb-6">
+          <span>Total</span>
+          <span>${{ getTotalPrice() + 10 }}</span>
+        </div>
+  
+        <div>
+          <label for="paymentType" class="block text-sm font-medium text-gray-700 mb-1">Payment Type</label>
+          <select
+            id="paymentType"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-500"
+          >
+            <option value="bank">Bank Payment</option>
+            <option value="card">Card Payment</option>
+            <option value="paypal">PayPal</option>
+          </select>
+        </div>
+  
+        <button (click)="placeOrder()" class="mt-6 w-full bg-cyan-800 text-white py-2 rounded-md shadow hover:bg-cyan-900">
+          Place Order
+        </button>
+      </div>
+    </div>
+  </div>
+  
