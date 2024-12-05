@@ -1,27 +1,91 @@
-# ECom
+# **Online Shop**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+An e-commerce web application built with **Angular 17**. This frontend-only application provides a seamless user experience with features such as **home**, **sign in**, **sign up**, **advanced search**, **wishlist**, **cart**, **checkout**, and **single product views**.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## **Table of Contents**
+1. [Features](#features)
+2. [Technologies Used](#technologies-used)
+3. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+   - [Running the Application](#running-the-application)
+4. [Development Workflow](#development-workflow)
+5. [Build and Testing](#build-and-testing)
+6. [Further Help](#further-help)
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## **Features**
+- Home page with product listings.
+- User authentication: Sign in and Sign up.
+- Advanced search functionality.
+- Wishlist and cart management.
+- Checkout process.
+- Single product views for detailed information.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## **Technologies Used**
+- **Frontend**: Angular 17
+- **Styling**: CSS, and Tailwind CSS
+- **Build Tool**: Angular CLI 17.3.11
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## **Getting Started**
 
-## Running end-to-end tests
+### **Prerequisites**
+- **Node.js** (version 18 or higher)
+- **Angular CLI** (version 17.3.11 or higher)
+- A modern web browser (e.g., Chrome, Firefox, Edge)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### **Installation**
+1. Clone the repository:
+   - git clone: [Project](https://github.com/SandeepaLakruwan/Angular-E-Commerce-Web-Template.git)
+2. Install dependencies:
+   npm install
 
-## Further help
+## **Running the Application**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Start the development server:
+- ng serve
+
+### Open your browser and navigate to:
+- http://localhost:4200/
+- The application will automatically reload if you change any source files.
+
+## **Development Workflow**
+### Generate Components:
+- To create a new component:
+- ng generate component component-name
+
+- Generate Other Files:
+- You can also generate directives, pipes, services, classes, guards, interfaces, enums, or modules using:
+- ng generate directive|pipe|service|class|guard|interface|enum|module name
+
+## **Build and Testing**
+### Build
+- Build the project for production:
+- ng build
+- The build artifacts will be stored in the dist/ directory.
+- Running Unit Tests
+- Run unit tests with Karma:
+- ng test
+- Running End-to-End Tests
+- To execute end-to-end tests, add a testing package and run:
+- ng e2e
+
+## **Further Help**
+- For more help with Angular CLI commands, run:
+- ng help
+
+- Or visit the official Angular CLI Overview and Command Reference.
+
+## **Contributing**
+- Contributions, issues, and feature requests are welcome!
+Feel free to check the issues page or fork the repository.
+
+## **License**
+- This project is licensed under the MIT License. See the LICENSE file for more details.
