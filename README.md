@@ -3,6 +3,11 @@
 An e-commerce web application built with **Angular 17**. This frontend-only application provides a seamless user experience with features such as **home**, **sign in**, **sign up**, **advanced search**, **wishlist**, **cart**, **checkout**, and **single product views**.
 
 ---
+# 🌐 Demo
+
+Watch the demo on YouTube: https://youtu.be/q2EnmdCzr6A
+
+---
 
 ## **Table of Contents**
 1. [Features](#features)
